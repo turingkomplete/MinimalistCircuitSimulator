@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d54f93c-cb0e-47ed-a889-038f7356ac45" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MinimalistCircuitSimulator/META-INF/MinimalistCircuitSimulator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MinimalistCircuitSimulator/simulator/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MinimalistCircuitSimulator/simulator/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/simulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulator/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="ProjectId" id="1cKvzbI9L9fJBu5IJXFUPWXFM4J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="simulator.components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="simulator.Main" />
+      <module name="MinimalistCircuitSimulator" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d54f93c-cb0e-47ed-a889-038f7356ac45" name="Default Changelist" comment="" />
+      <created>1590290363062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590290363062</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Update Main.java">
+      <created>1590911955807</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590911955807</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update Component.java DFlipFlop.java And.java&#10;ADD Clock.java">
+      <created>1590915904668</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590915904668</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update gates and Debugger.java&#10;Delete control clock">
+      <created>1590916790192</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590916790192</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update JK">
+      <created>1590918053596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590918053596</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update Debugger" />
+    <MESSAGE value="Update Main.java" />
+    <MESSAGE value="Update Component.java DFlipFlop.java And.java&#10;ADD Clock.java" />
+    <MESSAGE value="Update gates and Debugger.java&#10;Delete control clock" />
+    <MESSAGE value="Update JK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update JK" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1590916922464">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590916922464" />
+    <state x="664" y="203" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1590849571156">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="664" y="203" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590849571156" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590916250169">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590916250169" />
+    <state x="581" y="112" key="CommitChangelistDialog2" timestamp="1590918052700">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="581" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590918052700" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1590918490135">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590918490135" />
+    <state width="1876" height="283" key="GridCell.Tab.0.bottom" timestamp="1590919469762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590919469762" />
+    <state width="1876" height="283" key="GridCell.Tab.0.center" timestamp="1590919469762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590919469762" />
+    <state width="1876" height="283" key="GridCell.Tab.0.left" timestamp="1590919469762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590919469762" />
+    <state width="1876" height="283" key="GridCell.Tab.0.right" timestamp="1590919469762">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590919469762" />
+    <state width="1876" height="348" key="GridCell.Tab.1.bottom" timestamp="1590869316690">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1590869316690" />
+    <state width="1876" height="348" key="GridCell.Tab.1.center" timestamp="1590869316690">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1590869316690" />
+    <state width="1876" height="348" key="GridCell.Tab.1.left" timestamp="1590869316690">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1590869316690" />
+    <state width="1876" height="348" key="GridCell.Tab.1.right" timestamp="1590869316690">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590869316690" />
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1590918055399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590918055399" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1590919482984">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590919482984" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590918026567">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590918026567" />
+    <state x="537" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590302183497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="537" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1590302183497" />
+    <state x="702" y="139" key="refactoring.ChangeSignatureDialog" timestamp="1590848326137">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="139" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590848326137" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1590834742037">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590834742037" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590857274511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590857274511" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((Clock)this).thread" custom="simulator.control.Clock" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
