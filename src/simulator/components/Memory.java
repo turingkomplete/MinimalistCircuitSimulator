@@ -3,7 +3,7 @@ package simulator.components;
 public class Memory extends Component {
     private Boolean[] memory;
 
-    private Memory(String label, Wire... inputs) {
+    public Memory(String label, Wire... inputs) {
         super(label, inputs);
         memory = new Boolean[65536];
         for (int i = 0; i < 32; ++i) {
@@ -37,10 +37,12 @@ public class Memory extends Component {
 
     @Override
     public void runComponent() {
-        if (inputs.get(0).getSignal()) {
-            memoryWrite();
-        } else {
-            memoryRead();
+        if(inputs.size() >= 49) {
+            if (inputs.get(0).getSignal()) {
+                memoryWrite();
+            } else {
+                memoryRead();
+            }
         }
     }
 }

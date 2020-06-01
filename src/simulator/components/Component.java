@@ -39,8 +39,10 @@ public abstract class Component implements Runnable {
         }
     }
 
-    public void addInput(Wire w) {
-        inputs.add(w);
+    public void addInput(Wire... inputWires) {
+        for (Wire w: inputWires) {
+            inputs.add(w);
+        }
     }
 
     public void setInput(Wire inputWire, int inputIndex) {
