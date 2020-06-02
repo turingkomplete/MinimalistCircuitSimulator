@@ -1,7 +1,7 @@
 package simulator.components;
 
 public class Not extends Component {
-    public Not(String label, Wire ... inputs) {
+    public Not(String label, Wire... inputs) {
         super(label, inputs);
         for(int i = 0; i < inputs.length; ++i) {
            outputs.add(new Wire(false));

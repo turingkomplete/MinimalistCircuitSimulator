@@ -1,5 +1,7 @@
 package simulator.components;
 
+import simulator.control.Circuit;
+
 import java.util.ArrayList;
 
 public abstract class Component implements Runnable {
@@ -9,20 +11,20 @@ public abstract class Component implements Runnable {
     protected long delay;
     protected Thread thread;
 
-    protected Component(String label, Wire ... inputs) {
+    protected Component(String label, Wire... inputs) {
         this(label, 0, inputs);
     }
 
-    protected Component(String label, long delay, Wire ... inputs) {
+    protected Component(String label, long delay, Wire... inputs) {
         this.label = label;
         this.delay = delay;
         outputs = new ArrayList<>();
         this.inputs = new ArrayList<>();
-        for (Wire w : inputs) {
+        for (Wire w: inputs) {
             this.inputs.add(w);
         }
         thread = new Thread(this);
-        thread.start();
+        Circuit.addComponent(this);
     }
 
     public abstract void runComponent();
@@ -37,6 +39,10 @@ public abstract class Component implements Runnable {
             }
             runComponent();
         }
+    }
+
+    public void startComponent() {
+        thread.start();
     }
 
     public void addInput(Wire... inputWires) {

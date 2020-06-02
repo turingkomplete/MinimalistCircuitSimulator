@@ -9,7 +9,7 @@ public class Or extends Component {
     @Override
     public void runComponent() {
         Wire result = new Wire(false);
-        for(Wire w : inputs) {
+        for(Wire w: inputs) {
             result.setSignal(result.getSignal() || w.getSignal());
         }
 

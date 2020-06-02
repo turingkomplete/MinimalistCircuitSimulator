@@ -26,5 +26,7 @@ public class Main {
 
         Debugger debugger = new Debugger(500);
         debugger.addTrackItem(a1, a2, clock,d1, d2, d3, jk);
+
+        Circuit.startAll();
     }
 }

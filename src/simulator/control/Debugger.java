@@ -1,6 +1,6 @@
 package simulator.control;
 
-import simulator.components.*;
+import simulator.components.Component;
 import simulator.components.Wire;
 
 import java.util.ArrayList;
