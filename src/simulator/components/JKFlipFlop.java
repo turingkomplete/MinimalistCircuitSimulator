@@ -8,12 +8,14 @@ public class JKFlipFlop extends Component implements FlipFlop {
         super(label, inputs);
         edgeFlag = true;
         outputs.add(new Wire(false));
+        outputs.add(new Wire(false));
         memory = false;
     }
 
     @Override
     public void setOutput() {
         outputs.get(0).setSignal(memory);
+        outputs.get(1).setSignal(!memory);
     }
 
     @Override
