@@ -1,12 +1,12 @@
 package simulator.control;
 
-import simulator.components.Component;
+import simulator.components.Connectable;
 import simulator.components.Wire;
 
 import java.util.ArrayList;
 
 public class Debugger implements Runnable{
-    public ArrayList<Component> trackList;
+    public ArrayList<Connectable> trackList;
     long delay;
     Thread thread;
 
@@ -17,8 +17,8 @@ public class Debugger implements Runnable{
         thread.start();
     }
 
-    public void addTrackItem(Component ... trackList) {
-        for (Component c : trackList) {
+    public void addTrackItem(Connectable ... trackList) {
+        for (Connectable c : trackList) {
             if (!this.trackList.contains(c)) {
                 this.trackList.add(c);
             }
@@ -27,7 +27,7 @@ public class Debugger implements Runnable{
 
     public void printState() {
         if (!trackList.isEmpty()) {
-            for (Component c : trackList) {
+            for (Connectable c : trackList) {
                 System.out.print(c.getLabel() + ": ");
                 for (Wire w : c.getOutputs()) {
                     System.out.print(w.getSignal() + " ");

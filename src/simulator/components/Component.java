@@ -4,7 +4,7 @@ import simulator.control.Circuit;
 
 import java.util.ArrayList;
 
-public abstract class Component implements Runnable {
+public abstract class Component implements Runnable, Connectable {
     protected String label;
     protected ArrayList<Wire> inputs;
     protected ArrayList<Wire> outputs;
@@ -51,6 +51,7 @@ public abstract class Component implements Runnable {
         }
     }
 
+    @Override
     public void setInput(Wire inputWire, int inputIndex) {
         if(getInputs().size() <= inputIndex) {
             while (getInputs().size() < inputIndex) {
@@ -62,19 +63,22 @@ public abstract class Component implements Runnable {
         }
     }
 
-    public String getLabel() {
-        return label;
-    }
-
+    @Override
     public Wire getOutput(int index) {
         return outputs.get(index);
     }
 
+    @Override
+    public String getLabel() {
+        return label;
+    }
+
+    @Override
     public ArrayList<Wire> getOutputs() {
         return outputs;
     }
 
-
+    @Override
     public ArrayList<Wire> getInputs() {
         return inputs;
     }

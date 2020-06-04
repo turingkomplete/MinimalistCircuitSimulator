@@ -8,25 +8,28 @@ import simulator.control.*;
 public class Main {
 
     public static void main(String[] args) {
-        And a1 = new And("And1", new Wire(true), new Wire(true));
-        And a2 = new And("And2", new Wire(false));
-
-
-        Clock clock = new Clock("Clock", 1000);
-        JKFlipFlop jk = new JKFlipFlop("JK", clock.getOutput(0), new Wire(true), new Wire(true));
-        DFlipFlop d1 = new DFlipFlop("D1", clock.getOutput(0));
-        DFlipFlop d2 = new DFlipFlop("D2", clock.getOutput(0));
-        DFlipFlop d3 = new DFlipFlop("D3", clock.getOutput(0));
-
-        a2.addInput(a1.getOutput(0));
-        d1.addInput(jk.getOutput(0));
-        d2.addInput(d1.getOutput(0));
-        d3.addInput(d2.getOutput(0));
-
-
+//        And a1 = new And("And1", new Wire(true), new Wire(true));
+//        And a2 = new And("And2", new Wire(false));
+//
+//
+//        Clock clock = new Clock("Clock", 1000);
+//        JKFlipFlop jk = new JKFlipFlop("JK", clock.getOutput(0), new Wire(true), new Wire(true));
+//        DFlipFlop d1 = new DFlipFlop("D1", clock.getOutput(0));
+//        DFlipFlop d2 = new DFlipFlop("D2", clock.getOutput(0));
+//        DFlipFlop d3 = new DFlipFlop("D3", clock.getOutput(0));
+//
+//        a2.addInput(a1.getOutput(0));
+//        d1.addInput(jk.getOutput(0));
+//        d2.addInput(d1.getOutput(0));
+//        d3.addInput(d2.getOutput(0));
+//
+//
+//        Debugger debugger = new Debugger(500);
+//        debugger.addTrackItem(a1, a2, clock,d1, d2, d3, jk);
+//
+        Adder adder = new Adder("ADDER", new Wire(false), new Wire(false), new Wire(false), new Wire(true));
         Debugger debugger = new Debugger(500);
-        debugger.addTrackItem(a1, a2, clock,d1, d2, d3, jk);
-
+        debugger.addTrackItem(adder);
         Circuit.startAll();
     }
 }
