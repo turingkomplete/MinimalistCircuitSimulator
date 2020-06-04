@@ -28,9 +28,11 @@ public class Main {
 //        Debugger debugger = new Debugger(500);
 //        debugger.addTrackItem(adder1, adder2);
 
-        ShiftRegister shiftRegister = new ShiftRegister("sr", new Wire(true));
+        ShiftRegister shiftRegister1 = new ShiftRegister("sr1", new Wire(true));
+        ShiftRegister shiftRegister2 = new ShiftRegister("sr2");
+        shiftRegister2.addInput(shiftRegister1.getOutput(0));
         Debugger debugger = new Debugger(500);
-        debugger.addTrackItem(shiftRegister);
+        debugger.addTrackItem(shiftRegister1, shiftRegister2);
 
         Circuit.startAll();
     }
