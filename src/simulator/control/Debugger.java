@@ -42,13 +42,13 @@ public class Debugger implements Runnable{
     public void run() {
         while (true) {
             if (!trackList.isEmpty()) {
+                printState();
+
                 try {
                     Thread.sleep(delay);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
-                printState();
             }
         }
     }

@@ -28,8 +28,5 @@ public class Adder extends Function {
         addInternalOutput(carryHalf.getOutput(0));
         addInternalOutput(sumFull.getOutput(0));
         addInternalOutput(carryFull.getOutput(0));
-
-//        Debugger debugger = new Debugger(500);
-//        debugger.addTrackItem(sumHalf, carryHalf, sumFull, carryFull);
     }
 }
