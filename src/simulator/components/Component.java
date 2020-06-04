@@ -15,8 +15,24 @@ public abstract class Component implements Runnable, Connectable {
         this(label, 0, inputs);
     }
 
+    protected Component(Function function, String label, Wire... inputs) {
+        this(function, label, 0, inputs);
+    }
+
     protected Component(String label, long delay, Wire... inputs) {
         this.label = label;
+        this.delay = delay;
+        outputs = new ArrayList<>();
+        this.inputs = new ArrayList<>();
+        for (Wire w: inputs) {
+            this.inputs.add(w);
+        }
+        thread = new Thread(this);
+        Circuit.addComponent(this);
+    }
+
+    protected Component(Function function, String label, long delay, Wire... inputs) {
+        this.label = function.getLabel() + ":" + label;
         this.delay = delay;
         outputs = new ArrayList<>();
         this.inputs = new ArrayList<>();
@@ -97,5 +113,11 @@ public abstract class Component implements Runnable, Connectable {
     @Override
     public int hashCode() {
         return label.hashCode();
+    }
+
+    @Override
+    public void initialOutput(int size) {
+        for (int i = 0; i < size; ++i)
+            outputs.add(new Wire(false));
     }
 }

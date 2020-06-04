@@ -3,6 +3,11 @@ package simulator.components;
 public class Xor extends Component {
     public Xor(String label, Wire... inputs) {
         super(label, inputs);
+        initialOutput(1);
+    }
+
+    public Xor(Function function, String label, Wire... inputs) {
+        super(function, label, inputs);
         outputs.add(new Wire(false));
     }
 

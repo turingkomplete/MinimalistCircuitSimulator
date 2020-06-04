@@ -6,6 +6,12 @@ public class Memory extends Component {
     public Memory(String label, Wire... inputs) {
         super(label, inputs);
         memory = new Boolean[65536];
+        initialOutput(32);
+    }
+
+    public Memory(Function function, String label, Wire... inputs) {
+        super(function, label, inputs);
+        memory = new Boolean[65536];
         for (int i = 0; i < 32; ++i) {
             outputs.add(new Wire(false));
         }

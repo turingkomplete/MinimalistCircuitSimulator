@@ -27,9 +27,11 @@ public class Main {
 //        Debugger debugger = new Debugger(500);
 //        debugger.addTrackItem(a1, a2, clock,d1, d2, d3, jk);
 //
-        Adder adder = new Adder("ADDER", new Wire(false), new Wire(false), new Wire(false), new Wire(true));
+        Adder adder1 = new Adder("ADDER1", new Wire(true), new Wire(true), new Wire(true), new Wire(true));
+        Adder adder2 = new Adder("ADDER1", new Wire(true), new Wire(true), new Wire(true));
+        adder2.addInput(adder1.getOutput(0));
         Debugger debugger = new Debugger(500);
-        debugger.addTrackItem(adder);
+        debugger.addTrackItem(adder1, adder2);
         Circuit.startAll();
     }
 }

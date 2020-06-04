@@ -8,6 +8,13 @@ public class DFlipFlop extends Component implements FlipFlop{
         super(label, inputs);
         edgeFlag = true;
         memory = false;
+        initialOutput(1);
+    }
+
+    public DFlipFlop(Function function, String label, Wire... inputs) {
+        super(function, label, inputs);
+        edgeFlag = true;
+        memory = false;
         outputs.add(new Wire(false));
     }
 

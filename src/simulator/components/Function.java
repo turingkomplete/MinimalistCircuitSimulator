@@ -4,22 +4,36 @@ import simulator.control.Circuit;
 
 import java.util.ArrayList;
 
-public abstract class Function implements Connectable {
+public abstract class Function implements Connectable, Runnable {
     protected String label;
     protected ArrayList<Wire> inputs;
     protected ArrayList<Wire> outputs;
+    protected ArrayList<Wire> internalOutputs;
+    protected Thread thread;
 
     public Function(String label, Wire... inputs) {
         this.label = label;
         outputs = new ArrayList<>();
+        internalOutputs = new ArrayList<>();
         this.inputs = new ArrayList<>();
         for (Wire w: inputs) {
             this.inputs.add(w);
         }
-        initialFunction();
+        thread = new Thread(this);
+        Circuit.addFunction(this);
     }
 
-    protected abstract void initialFunction();
+    public abstract void initialFunction();
+
+    public void updateOutputs() {
+        for (int i = 0; i < outputs.size(); ++i) {
+            outputs.get(i).setSignal(internalOutputs.get(i).getSignal());
+        }
+    }
+
+    protected void addInternalOutput(Wire internalOutput) {
+        internalOutputs.add(internalOutput);
+    }
 
     @Override
     public void addInput(Wire... inputWires) {
@@ -30,11 +44,11 @@ public abstract class Function implements Connectable {
 
     @Override
     public void setInput(Wire inputWire, int inputIndex) {
-        if(inputs.size() <= inputIndex) {
-            while (inputs.size() < inputIndex) {
-                inputs.add(new Wire());
+        if(getInputs().size() <= inputIndex) {
+            while (getInputs().size() < inputIndex) {
+                addInput(new Wire());
             }
-            inputs.add(inputWire);
+            addInput(inputWire);
         } else {
             inputs.set(inputIndex, inputWire);
         }
@@ -58,5 +72,22 @@ public abstract class Function implements Connectable {
     @Override
     public String getLabel() {
         return label;
+    }
+
+    @Override
+    public void initialOutput(int size) {
+        for (int i = 0; i < size; ++i)
+            outputs.add(new Wire());
+    }
+
+    public void startFunction() {
+        thread.start();
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            updateOutputs();
+        }
     }
 }

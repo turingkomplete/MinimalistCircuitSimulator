@@ -7,6 +7,13 @@ public class JKFlipFlop extends Component implements FlipFlop {
     public JKFlipFlop(String label, Wire... inputs) {
         super(label, inputs);
         edgeFlag = true;
+        initialOutput(2);
+        memory = false;
+    }
+
+    public JKFlipFlop(Function function, String label, Wire... inputs) {
+        super(function, label, inputs);
+        edgeFlag = true;
         outputs.add(new Wire(false));
         outputs.add(new Wire(false));
         memory = false;

@@ -3,6 +3,11 @@ package simulator.components;
 public class And extends Component {
     public And(String label, Wire... inputs) {
         super(label, inputs);
+        initialOutput(1);
+    }
+
+    public And(Function function, String label, Wire... inputs) {
+        super(function, label, inputs);
         outputs.add(new Wire(false));
     }
 
