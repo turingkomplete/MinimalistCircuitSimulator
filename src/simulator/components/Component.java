@@ -101,6 +101,12 @@ public abstract class Component implements Runnable, Connectable {
     }
 
     @Override
+    public void initialOutput(int size) {
+        for (int i = 0; i < size; ++i)
+            outputs.add(new Wire(false));
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -113,11 +119,5 @@ public abstract class Component implements Runnable, Connectable {
     @Override
     public int hashCode() {
         return label.hashCode();
-    }
-
-    @Override
-    public void initialOutput(int size) {
-        for (int i = 0; i < size; ++i)
-            outputs.add(new Wire(false));
     }
 }
