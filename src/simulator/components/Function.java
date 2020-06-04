@@ -22,6 +22,13 @@ public abstract class Function implements Connectable {
     protected abstract void initialFunction();
 
     @Override
+    public void addInput(Wire... inputWires) {
+        for (Wire w: inputWires) {
+            inputs.add(w);
+        }
+    }
+
+    @Override
     public void setInput(Wire inputWire, int inputIndex) {
         if(inputs.size() <= inputIndex) {
             while (inputs.size() < inputIndex) {

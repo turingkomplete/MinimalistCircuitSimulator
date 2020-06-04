@@ -45,6 +45,7 @@ public abstract class Component implements Runnable, Connectable {
         thread.start();
     }
 
+    @Override
     public void addInput(Wire... inputWires) {
         for (Wire w: inputWires) {
             inputs.add(w);
