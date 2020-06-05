@@ -23,6 +23,18 @@ public abstract class Function implements Connectable, Runnable {
         Circuit.addFunction(this);
     }
 
+    public Function(Function function, String label, Wire... inputs) {
+        this.label = function.getLabel() + ":" + label;
+        outputs = new ArrayList<>();
+        internalOutputs = new ArrayList<>();
+        this.inputs = new ArrayList<>();
+        for (Wire w: inputs) {
+            this.inputs.add(w);
+        }
+        thread = new Thread(this);
+        Circuit.addFunction(this);
+    }
+
     public abstract void initialFunction();
 
     public void updateOutputs() {
@@ -31,8 +43,10 @@ public abstract class Function implements Connectable, Runnable {
         }
     }
 
-    protected void addInternalOutput(Wire internalOutput) {
-        internalOutputs.add(internalOutput);
+    protected void addInternalOutput(Wire... internalOutputs) {
+        for (Wire internalOutput: internalOutputs) {
+            this.internalOutputs.add(internalOutput);
+        }
     }
 
     @Override

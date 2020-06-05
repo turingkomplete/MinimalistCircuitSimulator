@@ -17,7 +17,7 @@ public class Debugger implements Runnable{
         thread.start();
     }
 
-    public void addTrackItem(Connectable ... trackList) {
+    public void addTrackItem(Connectable... trackList) {
         for (Connectable c : trackList) {
             if (!this.trackList.contains(c)) {
                 this.trackList.add(c);
