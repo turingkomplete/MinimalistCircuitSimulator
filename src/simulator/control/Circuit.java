@@ -1,7 +1,7 @@
 package simulator.control;
 
 import simulator.components.Component;
-import simulator.components.Function;
+import simulator.functions.Function;
 
 import java.util.ArrayList;
 
@@ -18,9 +18,6 @@ public class Circuit {
     }
 
     public static void startAll() {
-        for (Function f: functions)
-            f.initialFunction();
-
         for (Component c : components)
             c.startComponent();
 

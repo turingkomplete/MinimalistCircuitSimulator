@@ -1,4 +1,4 @@
-package simulator.components;
+package simulator;
 
 public class Wire {
     private Boolean signal;

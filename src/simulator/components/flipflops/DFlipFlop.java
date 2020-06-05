@@ -1,6 +1,10 @@
-package simulator.components;
+package simulator.components.flipflops;
 
-public class DFlipFlop extends Component implements FlipFlop{
+import simulator.components.Component;
+import simulator.functions.Function;
+import simulator.Wire;
+
+public class DFlipFlop extends Component implements FlipFlop {
     private Boolean memory;
     private Boolean edgeFlag;
 

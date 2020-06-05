@@ -1,7 +1,11 @@
-package simulator.components;
+package simulator.components.gates;
+
+import simulator.components.Component;
+import simulator.functions.Function;
+import simulator.Wire;
 
 public class Nor extends Component {
-    public Nor(String label, Wire ... inputs) {
+    public Nor(String label, Wire... inputs) {
         super(label, inputs);
         initialOutput(1);
     }

@@ -1,4 +1,4 @@
-package simulator.components;
+package simulator.components.flipflops;
 
 public interface FlipFlop {
     void setOutput();

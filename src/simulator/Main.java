@@ -8,7 +8,11 @@ import simulator.control.*;
 public class Main {
 
     public static void main(String[] args) {
-        //Code
+        //code
+
+        Debugger debugger = new Debugger(1000);
+        debugger.addTrackItem();
+
         Circuit.startAll();
     }
 }

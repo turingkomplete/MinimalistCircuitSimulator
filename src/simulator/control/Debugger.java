@@ -1,7 +1,7 @@
 package simulator.control;
 
-import simulator.components.Connectable;
-import simulator.components.Wire;
+import simulator.Connectable;
+import simulator.Wire;
 
 import java.util.ArrayList;
 

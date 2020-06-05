@@ -1,5 +1,8 @@
 package simulator.components;
 
+import simulator.Wire;
+import simulator.functions.Function;
+
 public class Memory extends Component {
     private Boolean[] memory;
 

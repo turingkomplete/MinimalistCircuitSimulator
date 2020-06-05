@@ -1,7 +1,11 @@
-package simulator.components;
+package simulator.components.gates;
+
+import simulator.components.Component;
+import simulator.functions.Function;
+import simulator.Wire;
 
 public class Or extends Component {
-    public Or(String label, Wire ... inputs) {
+    public Or(String label, Wire... inputs) {
         super(label, inputs);
         initialOutput(1);
     }

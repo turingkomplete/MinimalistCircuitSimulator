@@ -1,5 +1,8 @@
 package simulator.components;
 
+import simulator.Wire;
+import simulator.functions.Function;
+
 public class Clock extends Component {
     private boolean state;
 

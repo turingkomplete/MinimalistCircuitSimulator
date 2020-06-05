@@ -1,12 +1,16 @@
-package simulator.components;
+package simulator.components.gates;
 
-public class And extends Component {
-    public And(String label, Wire... inputs) {
+import simulator.components.Component;
+import simulator.functions.Function;
+import simulator.Wire;
+
+public class Nand extends Component {
+    public Nand(String label, Wire... inputs) {
         super(label, inputs);
         initialOutput(1);
     }
 
-    public And(Function function, String label, Wire... inputs) {
+    public Nand(Function function, String label, Wire... inputs) {
         super(function, label, inputs);
         outputs.add(new Wire(false));
     }
@@ -18,6 +22,6 @@ public class And extends Component {
             result.setSignal(result.getSignal() && w.getSignal());
         }
 
-        getOutput(0).setSignal(result.getSignal());
+        getOutput(0).setSignal(!result.getSignal());
     }
 }

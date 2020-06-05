@@ -1,5 +1,7 @@
-package simulator.components;
+package simulator.functions;
 
+import simulator.Connectable;
+import simulator.Wire;
 import simulator.control.Circuit;
 
 import java.util.ArrayList;
@@ -21,6 +23,7 @@ public abstract class Function implements Connectable, Runnable {
         }
         thread = new Thread(this);
         Circuit.addFunction(this);
+        initialFunction();
     }
 
     public Function(Function function, String label, Wire... inputs) {
@@ -33,6 +36,7 @@ public abstract class Function implements Connectable, Runnable {
         }
         thread = new Thread(this);
         Circuit.addFunction(this);
+        initialFunction();
     }
 
     public abstract void initialFunction();

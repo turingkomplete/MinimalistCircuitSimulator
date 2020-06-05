@@ -1,4 +1,8 @@
-package simulator.components;
+package simulator.components.flipflops;
+
+import simulator.components.Component;
+import simulator.functions.Function;
+import simulator.Wire;
 
 public class JKFlipFlop extends Component implements FlipFlop {
     private Boolean memory;

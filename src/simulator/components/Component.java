@@ -1,6 +1,9 @@
 package simulator.components;
 
+import simulator.Connectable;
+import simulator.Wire;
 import simulator.control.Circuit;
+import simulator.functions.Function;
 
 import java.util.ArrayList;
 

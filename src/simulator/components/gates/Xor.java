@@ -1,4 +1,8 @@
-package simulator.components;
+package simulator.components.gates;
+
+import simulator.components.Component;
+import simulator.functions.Function;
+import simulator.Wire;
 
 public class Xor extends Component {
     public Xor(String label, Wire... inputs) {
