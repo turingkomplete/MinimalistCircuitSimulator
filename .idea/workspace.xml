@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d54f93c-cb0e-47ed-a889-038f7356ac45" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/simulator/functions/FullAdder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/simulator/functions/HalfAdder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/simulator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/simulator/Main.java" afterDir="false" />
     </list>
@@ -275,7 +273,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591434577432</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="ADD HalfAdder.java FullAdder.java sample code">
+      <created>1591440888350</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1591440888350</updated>
+    </task>
+    <task id="LOCAL-00031" summary="ADD HalfAdder.java FullAdder.java sample code">
+      <created>1591440919300</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1591440919300</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -302,7 +314,8 @@
     <MESSAGE value="modify Debugger.java Circuit.java Function.java" />
     <MESSAGE value="Replace Arraylist -&gt; List" />
     <MESSAGE value="ADD id printing functionality to Debugger.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD id printing functionality to Debugger.java" />
+    <MESSAGE value="ADD HalfAdder.java FullAdder.java sample code" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD HalfAdder.java FullAdder.java sample code" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" width="816" height="729" key="#Intentions" timestamp="1590989688080">
@@ -325,10 +338,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="252" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1590990850357" />
-    <state x="581" y="112" key="CommitChangelistDialog2" timestamp="1591440908900">
+    <state x="581" y="112" key="CommitChangelistDialog2" timestamp="1591440918472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="581" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591440908900" />
+    <state x="581" y="112" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591440918472" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1591353338417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -369,18 +382,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590990561938" />
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1591440890058">
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1591440920674">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591440890058" />
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591440920674" />
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1591439917147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591439917147" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591440846628">
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591441320793">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591440846628" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591441320793" />
     <state x="537" y="256" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1590302183497">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

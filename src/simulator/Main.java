@@ -2,10 +2,8 @@
 
 package simulator;
 
-import simulator.components.gates.And;
 import simulator.control.*;
 import simulator.functions.FullAdder;
-import simulator.functions.HalfAdder;
 
 public class Main {
     //sample code
