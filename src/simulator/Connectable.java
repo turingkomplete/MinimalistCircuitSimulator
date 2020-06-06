@@ -1,6 +1,6 @@
 package simulator;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface Connectable {
     String getLabel();
@@ -9,6 +9,6 @@ public interface Connectable {
     void setInput(int inputIndex, Wire inputWire);
     Wire getOutput(int index);
     Wire getInput(int index);
-    ArrayList<Wire> getOutputs();
-    ArrayList<Wire> getInputs();
+    List<Wire> getOutputs();
+    List<Wire> getInputs();
 }

@@ -6,6 +6,7 @@ import simulator.control.Circuit;
 import simulator.functions.Function;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Component implements Runnable, Connectable {
     private static int nextID = 0;
@@ -14,8 +15,8 @@ public abstract class Component implements Runnable, Connectable {
 
     protected String label;
     protected int id;
-    protected ArrayList<Wire> inputs;
-    protected ArrayList<Wire> outputs;
+    protected List<Wire> inputs;
+    protected List<Wire> outputs;
     protected long delay;
     protected Thread thread;
 
@@ -88,12 +89,12 @@ public abstract class Component implements Runnable, Connectable {
     }
 
     @Override
-    public ArrayList<Wire> getOutputs() {
+    public List<Wire> getOutputs() {
         return outputs;
     }
 
     @Override
-    public ArrayList<Wire> getInputs() {
+    public List<Wire> getInputs() {
         return inputs;
     }
 

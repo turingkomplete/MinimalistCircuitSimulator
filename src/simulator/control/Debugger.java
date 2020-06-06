@@ -4,9 +4,10 @@ import simulator.Connectable;
 import simulator.Wire;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class Debugger implements Runnable{
-    private ArrayList<Connectable> trackList;
+public class Debugger implements Runnable {
+    private List<Connectable> trackList;
     private long delay;
     private Thread thread;
 

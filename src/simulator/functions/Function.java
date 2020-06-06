@@ -6,6 +6,7 @@ import simulator.control.Circuit;
 import simulator.control.Debugger;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Function implements Connectable, Runnable {
     private static int nextID = 0;
@@ -15,9 +16,9 @@ public abstract class Function implements Connectable, Runnable {
     protected String label;
     protected int id;
     protected Debugger debugger;
-    protected ArrayList<Wire> inputs;
-    protected ArrayList<Wire> outputs;
-    protected ArrayList<Wire> internalOutputs;
+    protected List<Wire> inputs;
+    protected List<Wire> outputs;
+    protected List<Wire> internalOutputs;
     protected Thread thread;
 
     public Function(String label, Wire... inputs) {
@@ -86,12 +87,12 @@ public abstract class Function implements Connectable, Runnable {
     }
 
     @Override
-    public ArrayList<Wire> getOutputs() {
+    public List<Wire> getOutputs() {
         return outputs;
     }
 
     @Override
-    public ArrayList<Wire> getInputs() {
+    public List<Wire> getInputs() {
         return inputs;
     }
 
