@@ -15,14 +15,6 @@ public class JKFlipFlop extends Component implements FlipFlop {
         memory = false;
     }
 
-    public JKFlipFlop(Function function, String label, Wire... inputs) {
-        super(function, label, inputs);
-        edgeFlag = true;
-        outputs.add(new Wire(false));
-        outputs.add(new Wire(false));
-        memory = false;
-    }
-
     @Override
     public void setOutput() {
         outputs.get(0).setSignal(memory);
@@ -31,8 +23,8 @@ public class JKFlipFlop extends Component implements FlipFlop {
 
     @Override
     public void loadMemory() {
-        Boolean j = inputs.get(1).getSignal();
-        Boolean k = inputs.get(2).getSignal();
+        Boolean j = getInput(1).getSignal();
+        Boolean k = getInput(2).getSignal();
 
         if (j && !k)
             memory = true;
@@ -44,7 +36,7 @@ public class JKFlipFlop extends Component implements FlipFlop {
 
     @Override
     public void runComponent() {
-        if(inputs.get(0).getSignal() && edgeFlag) {
+        if(getInput(0).getSignal() && edgeFlag) {
             setOutput();
             try {
                 Thread.sleep(100);
@@ -53,7 +45,7 @@ public class JKFlipFlop extends Component implements FlipFlop {
             }
             loadMemory();
             edgeFlag = false;
-        } else if(!inputs.get(0).getSignal() && !edgeFlag) {
+        } else if(!getInput(0).getSignal() && !edgeFlag) {
             edgeFlag = true;
         }
     }

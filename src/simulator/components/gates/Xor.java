@@ -10,15 +10,10 @@ public class Xor extends Component {
         initialOutput(1);
     }
 
-    public Xor(Function function, String label, Wire... inputs) {
-        super(function, label, inputs);
-        outputs.add(new Wire(false));
-    }
-
     @Override
     public void runComponent() {
         int onesCounter = 0;
-        for(Wire w: inputs) {
+        for(Wire w: getInputs()) {
             if(w.getSignal()) {
                 onesCounter++;
             }

@@ -5,9 +5,15 @@ import simulator.Wire;
 import simulator.control.Circuit;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public abstract class Function implements Connectable, Runnable {
+    private static int nextID = 0;
+
+    private final String type = "function";
+
     protected String label;
+    protected int id;
     protected ArrayList<Wire> inputs;
     protected ArrayList<Wire> outputs;
     protected ArrayList<Wire> internalOutputs;
@@ -15,33 +21,20 @@ public abstract class Function implements Connectable, Runnable {
 
     public Function(String label, Wire... inputs) {
         this.label = label;
+        id = nextID;
+        nextID++;
         outputs = new ArrayList<>();
         internalOutputs = new ArrayList<>();
         this.inputs = new ArrayList<>();
-        for (Wire w: inputs) {
-            this.inputs.add(w);
-        }
+        addInput(inputs);
         thread = new Thread(this);
         Circuit.addFunction(this);
         initialFunction();
     }
 
-    public Function(Function function, String label, Wire... inputs) {
-        this.label = function.getLabel() + ":" + label;
-        outputs = new ArrayList<>();
-        internalOutputs = new ArrayList<>();
-        this.inputs = new ArrayList<>();
-        for (Wire w: inputs) {
-            this.inputs.add(w);
-        }
-        thread = new Thread(this);
-        Circuit.addFunction(this);
-        initialFunction();
-    }
+    protected abstract void initialFunction();
 
-    public abstract void initialFunction();
-
-    public void updateOutputs() {
+    private void updateOutputs() {
         for (int i = 0; i < outputs.size(); ++i) {
             outputs.get(i).setSignal(internalOutputs.get(i).getSignal());
         }
@@ -61,14 +54,14 @@ public abstract class Function implements Connectable, Runnable {
     }
 
     @Override
-    public void setInput(Wire inputWire, int inputIndex) {
+    public void setInput(int inputIndex, Wire inputWire) {
         if(getInputs().size() <= inputIndex) {
             while (getInputs().size() < inputIndex) {
                 addInput(new Wire());
             }
             addInput(inputWire);
         } else {
-            inputs.set(inputIndex, inputWire);
+            setInput(inputIndex, inputWire);
         }
     }
 
@@ -85,6 +78,11 @@ public abstract class Function implements Connectable, Runnable {
     @Override
     public ArrayList<Wire> getInputs() {
         return inputs;
+    }
+
+    @Override
+    public Wire getInput(int index) {
+        return getInputs().get(index);
     }
 
     @Override
@@ -107,5 +105,25 @@ public abstract class Function implements Connectable, Runnable {
         while (true) {
             updateOutputs();
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Function function = (Function) o;
+
+        if (id != function.id) return false;
+        if (!type.equals(function.type)) return false;
+        return label.equals(function.label);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = type.hashCode();
+        result = 31 * result + label.hashCode();
+        result = 31 * result + id;
+        return result;
     }
 }

@@ -8,7 +8,12 @@ import simulator.functions.Function;
 import java.util.ArrayList;
 
 public abstract class Component implements Runnable, Connectable {
+    private static int nextID = 0;
+
+    private final String type = "component";
+
     protected String label;
+    protected int id;
     protected ArrayList<Wire> inputs;
     protected ArrayList<Wire> outputs;
     protected long delay;
@@ -18,35 +23,19 @@ public abstract class Component implements Runnable, Connectable {
         this(label, 0, inputs);
     }
 
-    protected Component(Function function, String label, Wire... inputs) {
-        this(function, label, 0, inputs);
-    }
-
     protected Component(String label, long delay, Wire... inputs) {
         this.label = label;
+        id = nextID;
+        nextID++;
         this.delay = delay;
         outputs = new ArrayList<>();
         this.inputs = new ArrayList<>();
-        for (Wire w: inputs) {
-            this.inputs.add(w);
-        }
+        addInput(inputs);
         thread = new Thread(this);
         Circuit.addComponent(this);
     }
 
-    protected Component(Function function, String label, long delay, Wire... inputs) {
-        this.label = function.getLabel() + ":" + label;
-        this.delay = delay;
-        outputs = new ArrayList<>();
-        this.inputs = new ArrayList<>();
-        for (Wire w: inputs) {
-            this.inputs.add(w);
-        }
-        thread = new Thread(this);
-        Circuit.addComponent(this);
-    }
-
-    public abstract void runComponent();
+    protected abstract void runComponent();
 
     @Override
     public void run() {
@@ -72,20 +61,25 @@ public abstract class Component implements Runnable, Connectable {
     }
 
     @Override
-    public void setInput(Wire inputWire, int inputIndex) {
+    public void setInput(int inputIndex, Wire inputWire) {
         if(getInputs().size() <= inputIndex) {
             while (getInputs().size() < inputIndex) {
                 addInput(new Wire());
             }
             addInput(inputWire);
         } else {
-            inputs.set(inputIndex, inputWire);
+            setInput(inputIndex, inputWire);
         }
     }
 
     @Override
     public Wire getOutput(int index) {
         return outputs.get(index);
+    }
+
+    @Override
+    public Wire getInput(int index) {
+        return getInputs().get(index);
     }
 
     @Override
@@ -116,11 +110,16 @@ public abstract class Component implements Runnable, Connectable {
 
         Component component = (Component) o;
 
+        if (id != component.id) return false;
+        if (!type.equals(component.type)) return false;
         return label.equals(component.label);
     }
 
     @Override
     public int hashCode() {
-        return label.hashCode();
+        int result = type.hashCode();
+        result = 31 * result + label.hashCode();
+        result = 31 * result + id;
+        return result;
     }
 }

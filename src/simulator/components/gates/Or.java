@@ -10,15 +10,10 @@ public class Or extends Component {
         initialOutput(1);
     }
 
-    public Or(Function function, String label, Wire ... inputs) {
-        super(function, label, inputs);
-        outputs.add(new Wire(false));
-    }
-
     @Override
     public void runComponent() {
         Wire result = new Wire(false);
-        for(Wire w: inputs) {
+        for(Wire w: getInputs()) {
             result.setSignal(result.getSignal() || w.getSignal());
         }
 
