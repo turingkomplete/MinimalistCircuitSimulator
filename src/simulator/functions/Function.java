@@ -107,6 +107,11 @@ public abstract class Function implements Connectable, Runnable {
     }
 
     @Override
+    public int getID() {
+        return id;
+    }
+
+    @Override
     public void initialOutput(int size) {
         for (int i = 0; i < size; ++i)
             outputs.add(new Wire());

@@ -4,6 +4,7 @@ import java.util.List;
 
 public interface Connectable {
     String getLabel();
+    int getID();
     void initialOutput(int size);
     void addInput(Wire... inputWires);
     void setInput(int inputIndex, Wire inputWire);

@@ -89,6 +89,11 @@ public abstract class Component implements Runnable, Connectable {
     }
 
     @Override
+    public int getID() {
+        return id;
+    }
+
+    @Override
     public List<Wire> getOutputs() {
         return outputs;
     }

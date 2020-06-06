@@ -29,7 +29,7 @@ public class Debugger implements Runnable {
     public void printState() {
         if (!trackList.isEmpty()) {
             for (Connectable c : trackList) {
-                System.out.print(c.getLabel() + ": ");
+                System.out.print(c.getLabel() + "[" + c.getID() + "]" + ": ");
                 for (Wire w : c.getOutputs()) {
                     System.out.print(w.getSignal() + " ");
                 }
