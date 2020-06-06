@@ -6,9 +6,9 @@ import simulator.Wire;
 import java.util.ArrayList;
 
 public class Debugger implements Runnable{
-    public ArrayList<Connectable> trackList;
-    long delay;
-    Thread thread;
+    private ArrayList<Connectable> trackList;
+    private long delay;
+    private Thread thread;
 
     public Debugger(long delay) {
         this.delay = delay;

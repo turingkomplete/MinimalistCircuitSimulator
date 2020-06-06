@@ -3,9 +3,9 @@ package simulator.functions;
 import simulator.Connectable;
 import simulator.Wire;
 import simulator.control.Circuit;
+import simulator.control.Debugger;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public abstract class Function implements Connectable, Runnable {
     private static int nextID = 0;
@@ -14,6 +14,7 @@ public abstract class Function implements Connectable, Runnable {
 
     protected String label;
     protected int id;
+    protected Debugger debugger;
     protected ArrayList<Wire> inputs;
     protected ArrayList<Wire> outputs;
     protected ArrayList<Wire> internalOutputs;
@@ -30,6 +31,20 @@ public abstract class Function implements Connectable, Runnable {
         thread = new Thread(this);
         Circuit.addFunction(this);
         initialFunction();
+    }
+
+    public Function(String label, Debugger debugger, Wire... inputs) {
+        this.label = label;
+        id = nextID;
+        nextID++;
+        outputs = new ArrayList<>();
+        internalOutputs = new ArrayList<>();
+        this.inputs = new ArrayList<>();
+        addInput(inputs);
+        thread = new Thread(this);
+        Circuit.addFunction(this);
+        initialFunction();
+        this.debugger = debugger;
     }
 
     protected abstract void initialFunction();
